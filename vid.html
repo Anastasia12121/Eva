@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир белок - Главная</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5dc;
+            color: #5c3a21;
+            overflow-x: hidden;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #8b5a2b, #a67c52);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(139, 90, 43, 0.3);
+            position: relative;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-direction: column;
+        }
+        
+        .logo i {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #f0e6d2;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            position: relative;
+        }
+        
+        .forest-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: -1;
+        }
+        
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .welcome-section h1 {
+            font-size: 2.5rem;
+            color: #8b5a2b;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .welcome-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .species-section {
+            margin-top: 40px;
+        }
+        
+        .species-section h2 {
+            color: #8b5a2b;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #d4a76a;
+            padding-bottom: 5px;
+        }
+        
+        .species-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(139, 90, 43, 0.1);
+            margin-bottom: 30px;
+            border: 2px solid #d4a76a;
+        }
+        
+        .species-card h3 {
+            color: #8b5a2b;
+            margin-bottom: 15px;
+        }
+        
+        .species-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .welcome-section h1 {
+                font-size: 2rem;
+            }
+            
+            .welcome-section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-squirrel"></i>
+            <span>Мир белок</span>
+            <div class="tagline">Всё о самых очаровательных лесных жителях</div>
+        </div>
+    </header>
+    
+    <div class="main-content">
+        <div class="forest-background"></div>
+        
+        <div class="welcome-section">
+            <h1>Добро пожаловать в удивительный мир белок!</h1>
+            <p>Белки - это не просто милые пушистые создания, а удивительно умные и ловкие животные, играющие важную роль в экосистеме леса. На нашем сайте вы узнаете множество интересных фактов о жизни этих замечательных зверьков.</p>
+        </div>
+        
+        <div class="species-section">
+            <h2>Виды белок</h2>
+            <p>Узнайте о различных видах белок, обитающих по всему миру - от обыкновенной белки до летяги и гигантской индийской белки.</p>
+            
+            <div class="species-card">
+                <h3>Подсемейство Sciurinae</h3>
+                <img src="https://previews.123rf.com/images/mettus/mettus1610/mettus161000313/64952662-%D1%81%D0%B5%D1%80%D1%8B%D0%B9-%D0%B0%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D0%BA%D0%B8%D0%B9-%D0%B1%D0%B5%D0%BB%D0%BA%D0%B0-%D0%BA%D0%BE%D0%BB%D0%BB%D0%B0%D0%B6.jpg" alt="Подсемейство Sciurinae">
+                <p>Наше первое подсемейство, подсемейство Sciurinae, является домом для большинства древесных белок и их родственников-белок-летяг. Это подсемейство включает в себя две основных трибы: Sciurini (древесные белки) и Pteromyini (белки-летяги).</p>
+                <p>Если вы живете в Северной Америке или Европе, белки, с которыми вы сталкиваетесь, скорее всего, относятся к подсемейству Sciurinae. Некоторые из них являются одними из наиболее широко распространенных видов на Земле, так что вероятность того, что вы увидите их во время прогулки по парку, довольно высока.</p>
+            </div>
+            
+            <div class="species-card">
+                <h3>Амазонская белка, или желтобрюхая белка</h3>
+                <img src="data:image/jpeg;base64,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" alt="Амазонская белка">
+                <p>Амазонская белка размером с бурундука. Она обитает в основном в северной части Южной Америки. Ее естественная среда обитания простирается по всей Колумбии, Перу, Бразилии, Боливии и Эквадору, хотя обычно желтобрюхую белку можно найти в бассейне Амазонки.</p>
+            </div>
+            
+            <div class="species-card">
+                <h3>Аризонская белка</h3>
+                <img src="data:image/jpeg;base64,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" alt="Аризонская белка">
+                <p>Как следует из названия, аризонская белка обитает в американском штате Аризона. Ее часто можно идентифицировать по серому меху, кремовому животу и большому пушистому хвосту.</p>
+                <p>Это маленькая белка обычно живет в лесистых районах на дне речных каньонов в пустыне. Она отдает предпочтение лиственным лесам, где можно найти ее любимую пищу: ягоды можжевельника, желуди и сосновые шишки.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

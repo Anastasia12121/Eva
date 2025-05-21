@@ -1,0 +1,362 @@
+ /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5dc;
+            color: #5c3a21;
+            overflow-x: hidden;
+        }
+        
+        /* Шапка */
+        header {
+            background: linear-gradient(90deg, #8b5a2b, #a67c52);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(139, 90, 43, 0.3);
+            position: relative;
+            z-index: 100;
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #f0e6d2;
+            margin-top: 10px;
+            font-style: italic;
+        }
+        
+        /* Основное содержимое */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            position: relative;
+        }
+        
+        /* Лесной фон */
+        .forest-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: -1;
+        }
+        
+        /* Приветственная секция */
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .welcome-section h1 {
+            font-size: 2.5rem;
+            color: #8b5a2b;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .welcome-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Анимированная белка */
+        .squirrel-animation {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 40px;
+            background-image: url(https://png.pngtree.com/png-clipart/20190118/ourmid/pngtree-squirrel-small-animals-cute-squirrel-cute-animal-png-image_457123.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: jump 3s infinite ease-in-out;
+        }
+        
+        @keyframes jump {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            20% { transform: translateY(-30px) rotate(5deg); }
+            40% { transform: translateY(0) rotate(-5deg); }
+            60% { transform: translateY(-15px) rotate(3deg); }
+            80% { transform: translateY(0) rotate(-3deg); }
+        }
+        
+        /* Карточки с информацией */
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .info-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(139, 90, 43, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #d4a76a;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(139, 90, 43, 0.2);
+        }
+        
+        .info-card h2 {
+            color: #8b5a2b;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-card h2 i {
+            color: #a67c52;
+        }
+        
+        .info-card p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .info-card .btn {
+            display: inline-block;
+            background-color: #a67c52;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .info-card .btn:hover {
+            background-color: #8b5a2b;
+        }
+        
+        /* Галерея белок */
+        .gallery-section {
+            margin-bottom: 50px;
+        }
+        
+        .gallery-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #8b5a2b;
+            margin-bottom: 30px;
+        }
+        
+        .squirrel-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 250px;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+            z-index: 5;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-item .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(139, 90, 43, 0.8);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover .caption {
+            transform: translateY(0);
+        }
+        
+        /* Бегающие белки */
+        .running-squirrels {
+            position: fixed;
+            width: 100%;
+            height: 100px;
+            bottom: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 10;
+            overflow: hidden;
+        }
+        
+        .squirrel {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-image: url('https://png.pngtree.com/png-clipart/20190118/ourmid/pngtree-squirrel-small-animals-cute-squirrel-cute-animal-png-image_457123.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: run linear infinite;
+        }
+        
+        @keyframes run {
+            0% { transform: translateX(-100px); }
+            100% { transform: translateX(calc(100vw + 100px)); }
+        }
+        
+        /* Подвал */
+        footer {
+            background: linear-gradient(90deg, #8b5a2b, #a67c52);
+            padding: 30px 0;
+            text-align: center;
+            color: #f0e6d2;
+            position: relative;
+            z-index: 100;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #f0e6d2;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+                flex-direction: column;
+            }
+            
+            .welcome-section h1 {
+                font-size: 2rem;
+            }
+            
+            .welcome-section p {
+                font-size: 1rem;
+            }
+            
+            .squirrel-animation {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+   
+
